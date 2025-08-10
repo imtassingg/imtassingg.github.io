@@ -5,87 +5,138 @@
   <title>SharpINT Official Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
   <style>
+    body {
+      background: linear-gradient(135deg, #11121a, #0a0b10);
+      color: #c8c8c8;
+      font-family: 'Ubuntu Mono', monospace;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-body {
-  background: linear-gradient(135deg, #11121a, #0a0b10);
-  color: #c8c8c8;
-  font-family: 'Ubuntu Mono', monospace;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    nav.navbar {
+      width: 100%;
+      background: #11121a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 0 10px #bd34feaa;
+      box-sizing: border-box;
+    }
 
-.container {
-  display: flex;
-  gap: 40px;
-  background: #11121acc;
-  box-shadow: 0 0 20px #bd34fe99;
-  border: 1px solid #3b1e64;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 900px;
-  width: 90%;
-  box-sizing: border-box;
-}
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-.image-section, .text-section {
-  background: #0d1117;
-  box-shadow: 0 0 15px #bd34fe55;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #c8c8c8;
-}
+    .navbar-logo img {
+      width: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #bd34fe;
+    }
 
-.image-section img {
-  max-width: 100%;
-  border: 2px solid #bd34fe;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #bd34fe;
-}
+    .navbar-title,
+    .navbar-link {
+      color: #bd34fe;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-.text-section h1 {
-  color: #bd34fe;
-  margin-bottom: 10px;
-  text-align: center;
-}
+    .navbar-title:hover,
+    .navbar-link:hover {
+      color: #ff77ff;
+      text-decoration: underline;
+    }
 
-.text-section h1::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #bd34fe;
-  margin: 0 auto 20px auto;
-  border-radius: 2px;
-}
+    .navbar-categories a {
+      margin-left: 15px;
+      font-size: 0.9rem;
+    }
 
-.text-section p, .text-section a {
-  text-align: center;
-}
+    .navbar-right button {
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      color: #bd34fe;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: color 0.3s;
+    }
 
-.text-section a {
-  color: #bd34fe;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .navbar-right button:hover {
+      color: #ff77ff;
+    }
 
-.text-section a:hover {
-  text-decoration: underline;
-}
+    .container {
+      display: flex;
+      gap: 40px;
+      background: #11121acc;
+      box-shadow: 0 0 30px #bd34fe99;
+      border: 1px solid #3b1e64;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      width: 90%;
+      margin: 40px 0;
+      box-sizing: border-box;
+      color: #ddd;
+    }
 
-footer {
-  text-align: center;
-  color: #bd34fe;
-  margin-top: 20px;
-}
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .image-section img {
+      max-width: 100%;
+      border: 3px solid #bd34fe;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #bd34feaa;
+    }
 
+    .text-section {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .text-section h1 {
+      color: #bd34fe;
+      font-size: 2rem;
+      margin: 0 0 10px 0;
+    }
+
+    .text-section h2 {
+      color: #efbbff;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .text-section b {
+      color: #e4b0ff;
+      font-size: 1.1rem;
+    }
+
+    .text-section p {
+      font-size: 1rem;
+      color: #c8c8c8;
+    }
+
+    footer {
+      text-align: center;
+      color: #bd34fe;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -109,10 +160,15 @@ footer {
   </nav>
 
   <div class="container">
-    <h1>* SharpINT Custom Website</h1>
-    <h2>* Hi, this is my website, do u like it?</h2>
-    <b>* Well if u like it, remember to visit the other sections!</b>
-    <p>Goodbye and have fun reading my website!</p>
+    <div class="image-section">
+      <img src="https://avatars.githubusercontent.com/u/161966183?s=400&u=31eace7386cd10628e198e2e87dcbfdcc3800155&v=4" alt="SharpINT Logo" />
+    </div>
+    <div class="text-section">
+      <h1>SharpINT Custom Website</h1>
+      <h2>Hi, this is my website, do you like it?</h2>
+      <b>Well, if you like it, remember to visit the other sections!</b>
+      <p>Goodbye and have fun reading my website!</p>
+    </div>
   </div>
 
   <footer>© 2025 SharpINT Team</footer>
