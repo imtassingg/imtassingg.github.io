@@ -6,40 +6,85 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
   <style>
 
-.text-section {
+body {
+  background: linear-gradient(135deg, #11121a, #0a0b10);
+  color: #c8c8c8;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  background: #11121acc;
+  box-shadow: 0 0 20px #bd34fe99;
+  border: 1px solid #3b1e64;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.image-section, .text-section {
   background: #0d1117;
   box-shadow: 0 0 15px #bd34fe55;
-  padding: 30px 20px;
+  padding: 20px;
   border-radius: 10px;
-  color: #c8c8c8;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
+  align-items: center;
+  color: #c8c8c8;
+}
+
+.image-section img {
+  max-width: 100%;
+  border: 2px solid #bd34fe;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #bd34fe;
 }
 
 .text-section h1 {
   color: #bd34fe;
-  margin-bottom: 15px;
-  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.text-section p {
-  margin: 10px 0;
+.text-section h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #bd34fe;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+.text-section p, .text-section a {
+  text-align: center;
 }
 
 .text-section a {
   color: #bd34fe;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .text-section a:hover {
   text-decoration: underline;
 }
+
+footer {
+  text-align: center;
+  color: #bd34fe;
+  margin-top: 20px;
+}
+
 
   </style>
 </head>
